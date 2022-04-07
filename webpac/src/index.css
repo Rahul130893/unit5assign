@@ -1,0 +1,11 @@
+.redtext{
+    color:red;
+}
+#root{
+    border:1px solid red;
+    margin:auto;
+    width:550px;
+    height:400px;
+    text-align: center;
+
+}
