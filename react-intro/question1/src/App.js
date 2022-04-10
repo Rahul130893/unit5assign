@@ -2,26 +2,47 @@
 import "./App.css";
 
 function App() {
+  const structure = [
+    {
+      heading: "Mobile Operating System",
+      data: [
+        { name: "Android", style: "disc" },
+        { name: "Blackberry", style: "disc" },
+        { name: "iPhone", style: "disc" },
+        { name: "windows phone", style: "disc" },
+      ],
+    },
+    {
+      heading: "Mobile Manufacturers",
+      data: [
+        { name: "samsung", style: "square" },
+        { name: "HTC", style: "square" },
+        { name: "micromax", style: "disc" },
+        { name: "Apple", style: "circle" },
+      ],
+    },
+  ];
+
   return (
     <div className="App">
-      <h1> Mobile Operating system</h1>
-      <div className="firstDiv">
-        <ul className="list">
-          <li>Android </li>
-          <li>Blackberry</li>
-          <li>iPhone</li>
-          <li>Windows Phone</li>
-        </ul>
-      </div>
-      <h1> Mobile Manufacturers</h1>
-      <div className="firstDiv">
-        <ul className="list">
-          <li>Samsung</li>
-          <li>HTC</li>
-          <li>Micromax</li>
-          <li>Apple</li>
-        </ul>
-      </div>
+      {structure.map((e) => {
+        return (
+          <Heading
+            heading={e.heading}
+            data={e.data.map((el) => {
+              return <li className={el.style}> {el.name}</li>;
+            })}
+          />
+        );
+      })}
+    </div>
+  );
+}
+function Heading({ heading, data }) {
+  return (
+    <div>
+      <h1>{heading}</h1>
+      <ul>{data}</ul>
     </div>
   );
 }

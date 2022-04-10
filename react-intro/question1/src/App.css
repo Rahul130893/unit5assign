@@ -3,14 +3,15 @@
   margin-left:50px;
 }
 
+.square{
+  list-style: square;
 
-
-.firstDiv{
-  width:20%;
-  margin-bottom:40px;
-}
-.list{
-  text-align: left;
 }
 
 
+.disc{
+  list-style: disc;
+}
+.circle{
+  list-style: circle;
+}
