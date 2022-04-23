@@ -1,0 +1,60 @@
+.App {
+  text-align: center;
+}
+
+
+.todo  {
+  width:300px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin:auto;
+  margin-top:10px;
+  border: 1px solid black;
+}
+
+
+
+.individualItems>div{
+  width:300px;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  margin:auto;
+  margin-top:10px;
+  border: 1px solid black;
+}
+.individualItems p{
+  font-size: 18px;
+  margin-left: 20px; 
+}
+
+
+.radiobtnA[type='radio']:after {
+  width: 16px;
+  height: 16px;
+  border-radius: 15px;
+  top: 0px;
+  left: -20px;
+  position: relative;
+  background-color: red;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 6px solid #4f4f4f;
+}
+
+.radiobtnB[type='radio']:after {
+  width: 16px;
+  height: 16px;
+  border-radius: 15px;
+  top: 0px;
+  left: -20px;
+  position: relative;
+  background-color: green;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 6px solid #4f4f4f;
+}
+
