@@ -2,13 +2,13 @@
 import '../App.css'
 import { TodoItem } from './TodoItem'
 
-export const TodoList=({list, handlestatus})=>{
+export const TodoList=({list})=>{
     return (
         <div className="list">
           
             <div>
            {list.map((e)=>(
-                 <TodoItem handlestatus={handlestatus} individual={e} /> 
+                 <TodoItem  individual={e}  /> 
            ))}
             </div>
             

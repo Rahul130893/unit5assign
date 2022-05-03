@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { TodoItem } from "./TodoItem";
+
 import { TodoList } from "./TodoList";
 
 const Todo = () => {
@@ -10,7 +10,6 @@ const Todo = () => {
   const getData = (data) => {
     
     const payload = {
-      //this is created to check wheather it is done or not for toggel
       title: data,
       status: false,
       id: Math.random(100),
@@ -18,23 +17,21 @@ const Todo = () => {
     setTodolist([...todolist, payload]);
   };
 
-  const handlestatus = (id) => {
-    setTodolist(
-      todolist.map((e) => (e.id === id ? { ...e, status: !e.status } : e))
-    );
-  };
+  // const handlestatus = (id) => {
+  //   setTodolist(
+  //     todolist.map((e) => (e.id === id ? { ...e, status: !e.status } : e))
+  //   );
+  // };
 
   return (
     <div >
 
-      <TodoList list={todolist}/>
+      <TodoList list={todolist} />
     
       <div className="todo">
       <input
-        onChange={(e) => {
-          
+        onChange={(e) => {      
           setText(e.target.value);
-           //on every change setText rerender the component and display text
         }}
         type="text"
         placeholder="Write Something"
